@@ -15,7 +15,9 @@ rules:
   - apiGroups: [""]
     resources: [events]
     verbs: [create]
-
+  - apiGroups: [""]
+    resources: [namespaces]
+    verbs: [list, watch]
   # Application: watching & handling for the custom resource we declare.
   - apiGroups: [iamauthenticator.k8s.aws]
     resources: [iamidentitymappings]
